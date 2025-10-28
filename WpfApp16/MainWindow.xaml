@@ -1,0 +1,67 @@
+﻿<Window x:Class="WpfApp16.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp16"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Label 
+                Content="Login Page"
+                FontSize="30"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                 FontStyle="Italic"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel  Grid.Row="0" 
+                Orientation="Horizontal">
+                <Label
+                    Content="User Name"
+                    FontSize="25"
+                    Width="150"
+                    Height="40"/>
+                <TextBox 
+                    x:Name="txt_name"
+                    Width="200"
+                    Height="50"
+                    BorderBrush="Black"
+                    BorderThickness="2"/>
+            </StackPanel>
+            <StackPanel  Grid.Row="1" 
+                Orientation="Horizontal">
+                <Label
+                    Content="User Password"
+                    FontSize="25"
+                    Width="190"
+                    Height="40"/>
+                <PasswordBox
+                     x:Name="txt_pass"
+                    Width="200"
+                    Height="50"
+                    BorderBrush="Black"
+                    BorderThickness="2"/>
+            </StackPanel>
+        </Grid>
+        <Button  
+            Grid.Row="2"
+            Width="200"
+            Height="40"
+            Content="Login"
+            FontSize="25"
+            FontStyle="Italic" Background="#FF316D24" Click="Button_Click" />
+
+    </Grid>
+
+</Window>
